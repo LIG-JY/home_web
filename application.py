@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import sys
 app = Flask(__name__) #Flask 객체 인스턴스 생성
 
@@ -11,6 +11,14 @@ def hello():
 @app.route("/apply") # 집 등록하기
 def apply():
     return render_template("apply.html")
+
+@app.route("/applyphoto") # 집 등록하기
+def applyphoto():
+    location = request.args.get("location")
+    cleaness = request.args.get("clean")
+    builin = request.args.get("builtin ")
+    print(location, cleaness, builin)
+    # return render_template("apply.html")
 
 @app.route("/resister") # 등록한 집 목록을 보기
 def resister():
