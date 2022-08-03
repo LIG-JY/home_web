@@ -1,1 +1,2 @@
 # templates라고 폴더 이름 지으면 에러가 안 나는데, template라고 폴더 이름 지으니까 에러가 납니다..
+# <form action="{{ url_for ('upload_done') }}" enctype="multipart/form-data" method="POST"><input type="file" name="file" /> <input type="submit" /></form></div> ## 파일 업로드 할 때 name="file" 빼먹으면 오류납니다.

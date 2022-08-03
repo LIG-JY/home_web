@@ -1,0 +1,8 @@
+<p>사진 업로드 하기</p>
+<article><header>
+<h1>사진 업로드 하기</h1>
+</header>
+<div>
+<p>사진을 업로드 합니다.</p>
+<form action="{{ url_for ('upload_done') }}" enctype="multipart/form-data" method="POST"><input type="file" name="file" /> <input type="submit" /></form></div>
+</article>
