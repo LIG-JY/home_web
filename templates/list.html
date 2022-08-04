@@ -4,15 +4,15 @@
 	<title></title>
 </head>
 <body>
-	<p>등록한 집 목록 보기</p>
+	<p>&nbsp;</p>
 	<article>
 		<header>
 			<h1>등록한 집 목록 보기</h1>
 		</header>
 		<div>
-			{% if length != 0%}{% for house in house_list %} <a href={{url_for('house_info', index=house[0])}}>
-			<h2>{{house[1]}}</h2></a>{% endfor %}{% else %}
-			<h2>집을 등록해주세요</h2>{% endif %}
+			{% if length != 0%}{% for house in house_list %}<a href = {{url_for("house_info", index=house[0])}}>
+            <h2>{{house[1]}}</h2></a>{% endfor %}{% else %}
+			<h2><span style="color: #ff0000;">등록된 집이 없습니다!</span></h2>{% endif %}
 		</div>
 	</article>
 </body>

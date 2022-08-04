@@ -39,13 +39,13 @@ def list():
     return render_template("list.html", house_list = house_list, length = length)  # list.html에 house_list, lengt라는 변수를 할당합니다.
 
 @app.route("/house_info/<int:index>/")  # 데코레이터에서 index라는 int 값을 받을 수 있게 합니다.
-def house_info(index): # 등록한 집 목록을 보기
+def house_info(index): # 등록한 집 목록을 보기, 인자 index는 list.html에서 url_for으로 받습니다.
     house_info = database.load_house(index)  # index는 Dataframe에서 save메소드의 index
     location = house_info["location"]
     cleaness = house_info["cleaness"]
     built_in = house_info["built_in"]
     photo = f"img/{index}.jpeg"
-    return render_template("house_info.html", location=location, cleaness = cleaness, built_in = built_in, photo= photo)
+    return render_template("house_info.html", location=location, cleaness = cleaness, built_in = built_in, photo= photo) #house_info.html로 들어가는 변수를 할당
     # 등록된 house_info table HTML페이지로 넘어갑니다.
     
 if __name__=="__main__":

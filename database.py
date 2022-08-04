@@ -1,4 +1,5 @@
 import pandas as pd
+## SQL로 DB만들 시간 없어서 일단 pandas로 했습니다.
 
 def save(location, cleaness, built_in):  #dataframe으로 데이터를 저장하는 함수
     idx = len(pd.read_csv("database.csv"))
