@@ -1,5 +1,5 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>집 찾기?</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>등록한 집 목록 보기</title><style>
 /* webkit printing magic: print all background colors */
 html {
 	-webkit-print-color-adjust: exact;
@@ -390,6 +390,11 @@ code {
 	padding: 1.5em 1em;
 }
 
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
 .code > code {
 	background: none;
 	padding: 0;
@@ -620,7 +625,8 @@ blockquote {
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
 }
 	
-</style></head><body><article id="3670c501-99dd-4d50-9328-9daf5860c6d1" class="page sans"><header><h1 class="page-title">집 찾기?</h1></header><div class="page-body"><p id="9857c72d-af10-4a9a-8cfb-ccb84ab36b37" class="">
-</p><p id="22f918d9-0b14-4a57-87f3-e5ae2ce636c6" class=""><a href="/apply"> 집 등록하기</a></p><p id="ef8f7439-e8a9-4fdd-b3dc-ecdc9483e7ba" class="">
-</p><p id="894f3539-c7bc-4b28-9250-9ecae4ecd6b6" class=""><a href="/list">등록한 집 목록보기</a></p><p id="2cc699a5-eed7-42d6-bd14-3dd59752269b" class="">
-</p></div></article></body></html>
+</style></head><body><article id="b041835d-7a94-40f8-a388-e695bf0abc72" class="page sans"><header><h1 class="page-title">등록한 집 목록 보기</h1></header><div class="page-body"><p id="1dfa0171-0820-407a-a3ad-addf93f4dc07" class="">
+    </p>{% if length != 0%}{% for house in house_list %}<a href = {{url_for("house_info", index = house[0])}}><h2 id="84fc2feb-e628-4944-ba40-8cbca7967142" class="">{{house[1]}}</h2></a>{% endfor %}{% else %}<h2 id="84fc2feb-e628-4944-ba40-8cbca7967142" class="">집을 등록해주세요</h2>{% endif %}
+    
+    
+    </div></article></body></html>
