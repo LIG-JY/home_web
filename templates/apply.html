@@ -1,21 +1,22 @@
-<p>집 등록하기</p>
-<article>
-  <header>
-    <h1>&lt;집 등록하기&gt;</h1>
-    <p>&nbsp;</p>
-  </header>
-  <div>
-    <form action="/applyphoto" method="get">
-      <p>&nbsp; &nbsp;&nbsp; <input name="location" required="" type="text" placeholder="위치를 입력하세요" />
-      </p>
-      <p>&nbsp;</p>
-      <p>
-        <input name="clean" type="checkbox" value="clean" />
-        <textarea cols="45" name="builtin" required="" rows="4" placeholder="빌트인항목"></textarea>
-      </p>
-      <p>&nbsp;</p>
-      <p>&nbsp; &nbsp; &nbsp; <button>사진 입력하기</button>
-      </p>
-    </form>
-  </div>
-</article>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p>집 등록하기</p>
+	<article>
+		<header>
+			<h1>&lt;집 등록하기&gt;</h1>
+		</header>
+		<div>
+			<form action="/applyphoto" method="get">
+				<p><input name="location" placeholder="위치를 입력하세요" required="" type="text"></p>
+				<p><input name="clean" type="checkbox" value="clean"> 
+				<textarea cols="45" name="builtin" placeholder="빌트인항목" required="" rows="4"></textarea></p>
+				<p><button>사진 입력하기</button></p>
+			</form>
+		</div>
+	</article>
+</body>
+</html>

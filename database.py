@@ -14,8 +14,7 @@ def load_list():  # 저장된 데이터를 리스트형태로 불러오는 함�
     df = pd.read_csv("database.csv")
     for i in range(len(df)):
         house_list.append(df.iloc[i].tolist())
-    print(house_list)
-    # return house_list
+    return house_list
     
 def now_index():  
     df = pd.read_csv("database.csv")
@@ -24,7 +23,7 @@ def now_index():
 
 def load_house(idx):
     df = pd.read_csv("database.csv")
-    house_inf = df.iloc[idx]
+    house_info = df.iloc[idx]
     return house_info
 
 
