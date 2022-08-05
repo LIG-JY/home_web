@@ -1,3 +1,4 @@
 index,location,cleaness,built_in
-0,강서구,True,
-1,종로구,False,
+0,종로구,True,
+1,강서구,False,
+2,강남구,False,
